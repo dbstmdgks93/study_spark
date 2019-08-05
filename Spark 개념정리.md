@@ -74,7 +74,42 @@
 
 
 
+### 신경망 학습에서 spark의 역할
+
+#### 하이퍼파라미터 튜닝
+
+교육시간을 단축하고 오류율을 줄인다. 
+
+tensorflow의 하이퍼파라미터 튜닝이 tensorflow 자체를 분산하여 배포하지 않아도 내부에서 병렬적으로 이루어진다. 따라서 이 과정을 spark를 사용하여 분산하여 해결한다 (데이터 및 모델 description을 브로드캐스팅하고 fault-tolerance하게 클러스터를 구축할 수 있다는 의미).
+
+
+
+#### 대규모 모델 배포
+
+Spark를 사용하여 많은 양의 데이터에 훈련된 모델을 만들 수 있다.
+
+
+
+### SparkFlow : Train Tensorflow Models with Apache Spark Pipelines
+
+교수님께서 주신 링크 2번 내용.
+
+Spark와 SparkML은 대규모 데이터 세트에서 복잡한 파이프라인을 조율할 수 있는 아키텍쳐를 지원한다.
+하지만 현재 이미지용 CNN이나 자연어 처리를 위한 RNN등은 지원하지 않는다.
+
+feature engineering pipeline은 원시데이터를 정리하고 학스모델로 변환 및 준비하는 프로세스를 크게 단순화시킨다.
+
+Tensorflow는 다양한 신경망을 학습시키는데 적합하지만 Spark에 비해 대형 데이터셋의 파이프라인에 대한 기능지원이 부족하다. 
+
+Spark에서 Tensorflow 모델을 교육하기 위해 다른 오픈소스 라이브러리가 존재하지만, SparkML의 기능을 모두 이용하는 개발자는 거의 없다.
+
+이에따라 2018에 LifeOmic에서 Sparkflow를 출시했다. Spark의 파이프라인 API 인터페이스를 Tensorflow와 결합한다. pip을 통해 설치가 가능하다.  
+
+
+
 ## 스파크의 기본 아키텍쳐
+
+
 
 
 
@@ -83,12 +118,15 @@
 ## 참고자료
 
 - Spark : The Definitive Guide , 스파크 완벽 가이드 , 한빛미디어
-
-
-
-
-
-### 읽을거리
-
 - http://www.itworld.co.kr/news/107192
-- 
+- https://databricks.com/blog/2016/01/25/deep-learning-with-apache-spark-and-tensorflow.html - 교수님께서 주신 링크 1 (2016.01.25)
+- https://medium.com/lifeomic/sparkflow-train-tensorflow-models-with-apache-spark-pipelines-74dca32f60f3 - - 교수님께서 주신 링크 2 (2018.08.24)
+- https://github.com/lifeomic/sparkflow - 교수님께서 주신 링크 2에서 들어감
+- [http://www.engear.net/wp/hyper-paramertesr-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/](http://www.engear.net/wp/hyper-paramertesr-머신러닝/) - 하이퍼파라미터
+- https://databuzz-team.github.io/2018/12/05/hyperparameter-setting/ - 하이퍼파라미터 튜닝이란
+- http://research.sualab.com/introduction/practice/2019/02/19/bayesian-optimization-overview-1.html - 베이지안 최적화 1
+- https://research.sualab.com/introduction/practice/2019/04/01/bayesian-optimization-overview-2.html - 베이지안 최적화 2
+
+
+
+
