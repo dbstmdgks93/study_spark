@@ -107,6 +107,10 @@ Spark에서 Tensorflow 모델을 교육하기 위해 다른 오픈소스 라이�
 
 이에따라 2018에 LifeOmic에서 Sparkflow를 출시했다. Spark의 파이프라인 API 인터페이스를 Tensorflow와 결합한다. pip을 통해 설치가 가능하다.  
 
+#### 야후의 TFOS와 같은 개념인가?
+
+같은 목적을 위한 다른 라이브러리이다.
+
 
 
 ## 스파크의 기본 아키텍쳐
