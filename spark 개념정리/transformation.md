@@ -33,3 +33,19 @@
 파티션 수가 같고, 파티션에 있는 요소의 수도 같은 두 개의 RDD를 조합해 한 쪽의 요소 값을 key로, 다른 한 쪽의 요소 값을 value로 가지는 pair를 만든다.
 
 ![zip 개요](images/zip%20%EA%B0%9C%EC%9A%94.PNG)
+
+
+
+### 변환 전의 RDD가 가지는 요소를 같은 RDD의 다른 요소와 함께 처리하는 변환
+
+- reduceByKey
+
+같은 키를 가지는 요소를 집약처리한다.
+
+![reduceByKey 개요](images/reduceByKey%20%EA%B0%9C%EC%9A%94.PNG)
+
+- join
+
+두 개의 RDD에서 같은 키를 가지는 요소끼리 조인한다.
+
+![join 개요](images/join%20%EA%B0%9C%EC%9A%94.PNG)
