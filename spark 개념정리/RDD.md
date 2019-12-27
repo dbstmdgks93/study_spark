@@ -4,14 +4,14 @@
 
 RDD는 여러 머신으로 구성된 클러스터 환경에서의 분산처리를 전제로 설계되었고, 내부는 파티션이라는 단위로 나뉜다. RDD를 파티션 단위로 여러 머신에서 처리하므로, 한 대의 머신으로 처리할 수 있는 것보다 더 큰 데이터를 다룰 수 있다.
 
-![RDD구조](images/RDD%EA%B5%AC%EC%A1%B0.PNG)
+![RDD 구조](images/RDD%20%EA%B5%AC%EC%A1%B0.PNG)
 
 사용자는 예를 들어 HDFS 등의 분산 파일시스템에 있는 파일 내용을 RDD로 로드하고, RDD를 가공하는 형식으로  대량의 데이터를 분산처리할 수 있다.
 
 - 변환(transformation) : 데이터를 가공하는 것
 - 액션(action) : 원하는 결과를 얻는 것
 
-![RDD의 flow](images/RDD%EC%9D%98%20flow.PNG)
+![RDD의 흐름](images/RDD%EC%9D%98%20%ED%9D%90%EB%A6%84.PNG)
 
 
 
