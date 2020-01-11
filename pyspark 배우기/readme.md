@@ -11,4 +11,5 @@
 
 - Chapter2 RDD 에서 .saveAsTextFile() 함수에서 에러발생함. 원인파악중
 - Chapter4 에 시각화부분에서 bokeh에러남. 책이 2년 반 정도 되어서 현재 bokeh의 사용법이 조금 바뀐듯 함. 찾아서 고쳐야 함
+- Chapter5 실습 데이터셋을 구하지 못하고 있음
 
