@@ -12,4 +12,9 @@
 - Chapter2 RDD 에서 .saveAsTextFile() 함수에서 에러발생함. 원인파악중
 - Chapter4 에 시각화부분에서 bokeh에러남. 책이 2년 반 정도 되어서 현재 bokeh의 사용법이 조금 바뀐듯 함. 찾아서 고쳐야 함
 - Chapter5 실습 데이터셋을 구하지 못하고 있음
+- Chapter6 : 
+
+  - Pyspark는 Java 1.8 버전에서 구동시키는 것을 권장함. OPENJDK 12버전 등을 사용하지 말고 ORACLE의 JDK를 써야 한다. 
+
+  - 모델 저장이 되지 않고 있음...
 
